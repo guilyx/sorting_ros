@@ -29,7 +29,7 @@ public:
 private:
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr hello_sub_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr sorting_pub_;
-  rclcpp::Service<sorting_msgs::srv::EnableSorting>::SharedPtr enable_sorting_srv_;
+  rclcpp::Service<sorting_msgs::srv::ToggleSorting>::SharedPtr enable_sorting_srv_;
 
   void hello_callback_(const std_msgs::msg::String::SharedPtr input_str);
   void toggle_publisher_callback_(const std::shared_ptr<sorting_msgs::srv::ToggleSorting::Request> request, std::shared_ptr<sorting_msgs::srv::ToggleSorting::Response> response);
