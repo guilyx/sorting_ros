@@ -32,7 +32,7 @@ private:
   rclcpp::Service<sorting_msgs::srv::ToggleSorting>::SharedPtr enable_sorting_srv_;
 
   void hello_callback_(const std_msgs::msg::String::SharedPtr input_str);
-  void toggle_publisher_callback_(const std::shared_ptr<sorting_msgs::srv::ToggleSorting::Request> request, std::shared_ptr<sorting_msgs::srv::ToggleSorting::Response> response);
+  void toggle_publisher_callback_(const std::shared_ptr<sorting_msgs::srv::ToggleSorting::Request>, std::shared_ptr<sorting_msgs::srv::ToggleSorting::Response> response);
 
   bool sorting_active_ = false;
 };
