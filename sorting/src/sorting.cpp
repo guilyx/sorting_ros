@@ -2,7 +2,6 @@
 
 Sorting::Sorting() : Node("sorting_topic")
 {
-    printf("test\n");
     hello_sub_ = this->create_subscription<std_msgs::msg::String>("hello", 10, std::bind(&Sorting::hello_callback_, this, std::placeholders::_1));
     sorting_pub_ = this->create_publisher<std_msgs::msg::String>("sorted", 10);
 }
