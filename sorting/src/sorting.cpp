@@ -23,5 +23,5 @@ void Sorting::hello_callback_(const std_msgs::msg::String::SharedPtr input_str)
 void Sorting::toggle_publisher_callback_(const std::shared_ptr<sorting_msgs::srv::ToggleSorting::Request> request, std::shared_ptr<sorting_msgs::srv::ToggleSorting::Response> response)
 {
     sorting_active_ = !sorting_active_;
-    response->result = true;
+    response->result = sorting_active_;
 }
