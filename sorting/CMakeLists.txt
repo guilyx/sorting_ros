@@ -8,7 +8,7 @@ endif()
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 20)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -30,21 +30,35 @@ include_directories(include
 	${sorting_msgs_INCLUDE_DIRS}
 	)
 
+add_library(sorting_lib src/sorting.cpp)
+
 add_executable(sorting src/sorting_node.cpp src/sorting.cpp)
 
 target_link_libraries(sorting
+  sorting_lib
 	${std_msgs_LIBRARIES}
   ${rclcpp_LIBRARIES}
   ${sorting_msgs_LIBRARIES}
 	)
 
-ament_target_dependencies(sorting
+  set(dependencies
   "rclcpp"
   "std_msgs"
   "sorting_msgs"
 )
 
+ament_target_dependencies(sorting_lib
+  "rclcpp"
+  "std_msgs"
+  "sorting_msgs"
+)
 
 install(TARGETS sorting DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
+
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  find_package(ament_cmake_pytest REQUIRED)
+  add_subdirectory(test)
+endif()
