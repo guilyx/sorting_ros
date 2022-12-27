@@ -4,24 +4,6 @@ A simple pkg that subscribe to a string topic and re-publishes the data as sorte
 
 # Instructions
 
-## Git Practice
-
-1. Fork the repository.
-2. Clone your forked repository.
-3. Through your terminal go to the cloned repo.
-4. Create your branch from the default branch (noetic-devel). `git checkout -b thenameofmynewbranch`
-5. Use `git status` to check if you're indeed on the branch `thenameofmynewbranch`
-6. Apply your changes, add your files, code some stuff.
-7. Add your changes using `git add .` or `git add nameofthespecificfile`. These added files will be the ones commited.
-8. Commit your changes (meaning they now exist in the git history of that branch) using `git commit -m "put here a meaningful commit, ie 'added the toggle service'"`
-9. Push your changes on the remote. (they'll appear on github, bitbucket, gitlab...). If the branch is new, use `git push -u origin thenameofmynewbranch`. If the branch was already there, simply use `git push`.
-10. Changes might have happen remotly by someone else. Use `git pull` to pull these changes.
-11. Open a Pull Request on Github/Bitbucket/Gitlab from `thenameofmynewbranch` to the target branch, here `noetic-devel`. Assign a reviewer that will send you change requests. Go back and forth until approved.
-12. On approval, you can now merge the PR. In an organized project, the senior will do the merge.
-13. There might be CONFLICTS! If the target branch (here `noetic-devel`) has changed since you've made your changes, git may not be able to resolve a merge strategy, and you'll have to manually change the branch.
-14. In order to resolve this manually, checkout to the target branch using `git checkout noetic-devel`, then pull the new changes using `git pull`. Head back to your branch using `git checkout thenameofmynewbranch`. Rebase all your commits on top of the target branch. (Meaning it'll cherry pick each commit you've ever made and rebase them on top of the target, you'll resolve the conflict in each commits). Use `git rebase origin/master`.
-15. Use this tutorial to resolve conflict: [here](https://linuxpip.org/fix-merge-conflicts-vscode/)
-
 ## The ROS Node
 
 ### Write a C++ node which:
@@ -68,6 +50,26 @@ It should instead use OOP, like [this](https://roboticsbackend.com/oop-with-ros-
 
 Helper library only available in ROS2 for now. So no going deeper here.
 
-## Disclamer
+
+# Git Best Practices
+
+1. Fork the repository.
+2. Clone your forked repository.
+3. Through your terminal go to the cloned repo.
+4. Create your branch from the default branch (noetic-devel). `git checkout -b thenameofmynewbranch`
+5. Use `git status` to check if you're indeed on the branch `thenameofmynewbranch`
+6. Apply your changes, add your files, code some stuff.
+7. Add your changes using `git add .` or `git add nameofthespecificfile`. These added files will be the ones commited.
+8. Commit your changes (meaning they now exist in the git history of that branch) using `git commit -m "put here a meaningful commit, ie 'added the toggle service'"`
+9. Push your changes on the remote. (they'll appear on github, bitbucket, gitlab...). If the branch is new, use `git push -u origin thenameofmynewbranch`. If the branch was already there, simply use `git push`.
+10. Changes might have happen remotly by someone else. Use `git pull` to pull these changes.
+11. Open a Pull Request on Github/Bitbucket/Gitlab from `thenameofmynewbranch` to the target branch, here `noetic-devel`. Assign a reviewer that will send you change requests. Go back and forth until approved.
+12. On approval, you can now merge the PR. In an organized project, the senior will do the merge.
+13. There might be CONFLICTS! If the target branch (here `noetic-devel`) has changed since you've made your changes, git may not be able to resolve a merge strategy, and you'll have to manually change the branch.
+14. In order to resolve this manually, checkout to the target branch using `git checkout noetic-devel`, then pull the new changes using `git pull`. Head back to your branch using `git checkout thenameofmynewbranch`. Rebase all your commits on top of the target branch. (Meaning it'll cherry pick each commit you've ever made and rebase them on top of the target, you'll resolve the conflict in each commits). Use `git rebase origin/master`.
+15. Use this tutorial to resolve conflict: [here](https://linuxpip.org/fix-merge-conflicts-vscode/)
+
+
+# Disclamer
 
 This is not a development package, but a tool to teach some ROS2 stuff.
