@@ -51,6 +51,7 @@ It should instead use OOP, like [this](https://roboticsbackend.com/oop-with-ros-
 Helper library only available in ROS2 for now. So no going deeper here.
 
 
+<!--
 # Git Best Practices
 
 1. Fork the repository.
@@ -68,7 +69,7 @@ Helper library only available in ROS2 for now. So no going deeper here.
 13. There might be CONFLICTS! If the target branch (here `noetic-devel`) has changed since you've made your changes, git may not be able to resolve a merge strategy, and you'll have to manually change the branch.
 14. In order to resolve this manually, checkout to the target branch using `git checkout noetic-devel`, then pull the new changes using `git pull`. Head back to your branch using `git checkout thenameofmynewbranch`. Rebase all your commits on top of the target branch. (Meaning it'll cherry pick each commit you've ever made and rebase them on top of the target, you'll resolve the conflict in each commits). Use `git rebase origin/master`.
 15. Use this tutorial to resolve conflict: [here](https://linuxpip.org/fix-merge-conflicts-vscode/)
-
+-->
 
 # Disclamer
 
